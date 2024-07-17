@@ -10,6 +10,7 @@
     HorizontalOptions="Center"
     WidthRequest="300" 
     HeightRequest="120"
+            
     />
         <Label 
     Text="Ingreso de usuarios"
