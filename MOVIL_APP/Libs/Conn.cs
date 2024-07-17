@@ -12,6 +12,7 @@ namespace MOVIL_APP.Libs
         //  dirección base del servidor
         public static string BaseUrl = "https://localhost:44364";
 
+
        
         public static string GetProductSearchUrl()
         {
