@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="79c39efbdd03436eaae2bf457eca626e" Name="Diagram1">
+        <EntityTypeShape EntityType="CUERITOSModel.Catalog" Width="1.5" PointX="3" PointY="5.125" />
+        <EntityTypeShape EntityType="CUERITOSModel.Order" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="CUERITOSModel.OrderDetail" Width="1.5" PointX="7.5" PointY="1.125" />
+        <EntityTypeShape EntityType="CUERITOSModel.Product" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="CUERITOSModel.Rol" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="CUERITOSModel.User" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="CUERITOSModel.FK_Product_Catalog" />
+        <AssociationConnector Association="CUERITOSModel.FK_Order_User" />
+        <AssociationConnector Association="CUERITOSModel.FK_OrderDetail_Order" />
+        <AssociationConnector Association="CUERITOSModel.FK_OrderDetail_Product" />
+        <AssociationConnector Association="CUERITOSModel.FK_User_Rol" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

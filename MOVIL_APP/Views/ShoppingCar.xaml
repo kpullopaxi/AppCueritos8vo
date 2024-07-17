@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MOVIL_APP.Views.ShoppingCar"
+             NavigationPage.HasNavigationBar="False"
+             Title="ShoppingCar">
+    <VerticalStackLayout>
+        <!-- Etiqueta para mostrar el título del carrito de compras -->
+        <Label 
+            Text="Carrito de compras"
+            FontSize="Title"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <!-- ListView para mostrar la lista de productos seleccionados -->
+        <CollectionView x:Name="CollectionShoppingCar" SelectionMode="Single" >
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="AliceBlue" Padding="10" Margin="0,0,0,10">
+                        <!-- Imagen a la izquierda -->
+                        <!--<Image Source="logo.png" WidthRequest="50" HeightRequest="50" Aspect="AspectFill" />-->
+
+                        <!-- Información a la derecha -->
+                        <StackLayout>
+
+                            <Label Text="{Binding name, StringFormat='Nombre: {0}'}" FontAttributes="Bold"/>
+                            <Label Text="{Binding description, StringFormat='Descripción: {0}'}"/>
+                            <Label Text="{Binding price, StringFormat='Precio: {0}'}"/>
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        <Label x:Name="lblTotalAmount"  />
+
+        <!-- Botón para finalizar la compra o realizar otras acciones -->
+        <Button Text="Checkout" Clicked="Button_Clicked" HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MOVIL_APP.Views.Public.Home"
+              NavigationPage.HasNavigationBar="False"
+             Title="Home">
+    <ScrollView>
+        <StackLayout >
+            <Grid VerticalOptions="Start" BackgroundColor="#F57C00">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" 
+            Text="Inicio" 
+            TextColor="White" 
+                FontSize="Medium"
+                 FontAttributes="Bold"
+            BackgroundColor="Transparent" 
+           />
+                <Button Grid.Column="2" 
+                x:Name="btnOrder"
+                Text="Comprar" 
+                TextColor="White"    
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Clicked="btnOrder_Clicked"
+                BackgroundColor="Transparent" 
+            />
+
+                <Button Grid.Column="4"
+           x:Name="btnUser"  Clicked="btnUser_Clicked"
+                        Text="{Binding UserName, StringFormat='Nombre: {0}'}"  
+            TextColor="White"    
+                FontAttributes="Bold"
+                FontSize="Medium"
+            BackgroundColor="Transparent" 
+             />
+            </Grid>
+
+
+            <Image 
+            Source="home.png"/>
+
+
+            <!-- Sección de imagen -->
+            <Frame  Padding="10" Margin="10">
+                <StackLayout>
+                    <Image 
+                    Source="https://d264tuzfk424fk.cloudfront.net/LandingPagePictures/eefa1406-a1f3-4f4c-9890-46b4637fe5d8_638365293378546065_.jpeg"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame  Padding="10" Margin="10">
+                <StackLayout>
+                    <Image 
+            Source="https://d264tuzfk424fk.cloudfront.net/LandingPagePictures/38ed60bd-673e-4577-913d-62b8a111e586_638364526454222951_.jpeg"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame  Padding="10" Margin="10">
+                <StackLayout>
+                    <Image 
+                 Source="https://d264tuzfk424fk.cloudfront.net/LandingPagePictures/da36b6a8-570c-4811-a161-95419dae6abb_638364530531649913_.jpeg"/>
+
+                </StackLayout>
+            </Frame>
+            
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

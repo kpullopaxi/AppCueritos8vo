@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MOVIL_APP.Views.Public.SelectProduct"
+             Title="SelectProduct">
+    <ScrollView>
+        <StackLayout >
+            <Grid VerticalOptions="Start" BackgroundColor="#F57C00">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" 
+         Text="Inicio" 
+         TextColor="White" 
+             FontSize="Medium"
+              FontAttributes="Bold"
+         BackgroundColor="Transparent" 
+        />
+                <Button Grid.Column="2" 
+             x:Name="btnOrder"
+             Text="Comprar" 
+             TextColor="White"    
+             FontAttributes="Bold"
+             FontSize="Medium"
+             Clicked="btnOrder_Clicked"
+             BackgroundColor="Transparent" 
+         />
+
+                <Button Grid.Column="4"
+        x:Name="btnUser"  Clicked="btnUser_Clicked"
+                     Text="{Binding UserName, StringFormat='Nombre: {0}'}"  
+         TextColor="White"    
+             FontAttributes="Bold"
+             FontSize="Medium"
+         BackgroundColor="Transparent" 
+          />
+            </Grid>
+
+
+            <SearchBar x:Name="txtSearch" TextChanged="txtSearch_TextChanged" Placeholder="Buscar..."                   
+            SearchCommand="{Binding SearchCommand}"
+            CancelButtonColor="Black"/>
+            <Button Text="CheckOut" TextColor="Black" x:Name="btnCheckOut"   
+    FontAttributes="Bold"
+    FontSize="Medium"
+BackgroundColor="White" Clicked="Button_Clicked" ></Button>
+
+            <CollectionView x:Name="collectionCatalog" SelectionMode="Single" SelectionChanged="collectionCatalog_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Spacing="10" Padding="10" Margin="0,0,0,10">
+                            <!-- Imagen a la izquierda -->
+                            <!--<Image Source="logo.png" WidthRequest="50" HeightRequest="50" Aspect="AspectFit" />-->
+                            <Image Source="agregar.png" WidthRequest="25"  HeightRequest="25"  Aspect="AspectFit" />
+
+                            <!-- Información a la derecha -->
+                            <StackLayout>
+
+                                <Label Text="{Binding name, StringFormat='Nombre: {0}'}" FontAttributes="Bold"/>
+                                <Label Text="{Binding description, StringFormat='Descripción: {0}'}"/>
+                                <Label Text="{Binding price, StringFormat='Precio: {0}'}"/>
+
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

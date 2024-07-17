@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MOVIL_APP.Views.Administration.Home"
+             NavigationPage.HasNavigationBar="False"
+             Title="Vendedor">
+    <ScrollView>
+        <StackLayout Spacing="10" >
+            <Grid VerticalOptions="Start" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" 
+        Text="Inicio" 
+        TextColor="White" 
+            FontSize="Medium"
+             FontAttributes="Bold"
+        BackgroundColor="Transparent" 
+       />
+                <Image Grid.Column="2"
+                    Source="logo.png"
+                     WidthRequest="100" 
+                     HeightRequest="100"
+                     BackgroundColor="Transparent" 
+                     />
+
+                <Button Grid.Column="4"
+       x:Name="btnUser"  Clicked="btnOrder_Clicked"
+                    Text="{Binding UserName, StringFormat='Nombre: {0}'}"  
+        TextColor="White"    
+            FontAttributes="Bold"
+            FontSize="Medium"
+        BackgroundColor="Transparent" 
+         />
+            </Grid>
+
+            <Frame  Padding="10" Margin="10">
+                <StackLayout>
+                    <Button 
+                        x:Name="btnProduct"
+                        Clicked="btnProduct_Clicked"
+                    Text="Productos" 
+                    TextColor="White" 
+                    FontSize="Medium"
+                     FontAttributes="Bold"
+                    
+/>
+
+                </StackLayout>
+            </Frame>
+            <Frame  Padding="10" Margin="10">
+                <StackLayout>
+                    <Button 
+                        x:Name="btnProductOrder"
+                        Clicked="btnProductOrder_Clicked"
+                    Text="Pedidos" 
+                    TextColor="White" 
+                    FontSize="Medium"
+                     FontAttributes="Bold"
+                    
+/>
+
+                </StackLayout>
+            </Frame>
+            <Frame  Padding="10" Margin="10">
+                <StackLayout>
+                    <Button 
+                        x:Name="btnCatalog"
+                    Text="Categorías" 
+                    TextColor="White" 
+                    FontSize="Medium"
+                     FontAttributes="Bold"
+                   Clicked="btnCatalog_Clicked"
+/>
+
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

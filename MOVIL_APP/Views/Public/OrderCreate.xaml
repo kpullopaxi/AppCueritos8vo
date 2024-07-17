@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MOVIL_APP.Views.Public.OrderCreate"
+             Title="Cancelar"
+             
+             >
+    <VerticalStackLayout>
+        <!--<Grid VerticalOptions="Start" BackgroundColor="#F57C00">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="1" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="1" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" 
+        Text="Inicio" 
+        TextColor="White" 
+            FontSize="Medium"
+             FontAttributes="Bold"
+        BackgroundColor="Transparent" 
+       />
+            <Button Grid.Column="2" 
+            Text="Comprar" 
+            TextColor="White"    
+            FontAttributes="Bold"
+            FontSize="Medium"
+            BackgroundColor="Transparent" 
+        />
+
+            <Button Grid.Column="4"
+       x:Name="btnUser"  Clicked="btnUser_Clicked"
+                    Text="{Binding UserName, StringFormat='Nombre: {0}'}"  
+        TextColor="White"    
+            FontAttributes="Bold"
+            FontSize="Medium"
+        BackgroundColor="Transparent" 
+         />
+        </Grid>-->
+
+        <Label Text="Generar orden" FontSize="Title" FontAttributes="Bold"
+               VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+
+        <Label Text="Dirección:" />
+        <Entry x:Name="txtAddress" Placeholder="Enter Address" />
+
+       
+        <!--<Label Text="Total:" />
+        <Entry x:Name="txtTotal" Placeholder="Enter Total" />-->
+
+       
+        <Button x:Name="generateOrden" Text="Generar Orden" Clicked="generateOrden_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>
