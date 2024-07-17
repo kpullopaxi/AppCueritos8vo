@@ -50,12 +50,7 @@
        FontSize="16"
        />
         </Frame>
-        <Label Text="¿Olvidaste tu contraseña?" 
-       TextColor="#F57C00" 
-       HorizontalOptions="EndAndExpand" 
-       VerticalOptions="EndAndExpand">
-
-        </Label>
+        
 
         <Button
     x:Name="btnLogin"
